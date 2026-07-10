@@ -134,3 +134,25 @@ async function reserveGift(id) {
 
 // ŠITOS EILUTĖS TRŪKO
 showGifts();
+async function openGift(id) {
+
+  const { data, error } = await supabaseClient
+    .from("gifts")
+    .select("*")
+    .eq("id", id)
+    .single();
+
+
+  if (error) {
+    console.log(error);
+    return;
+  }
+
+
+  alert(
+    data.title +
+    "\n\n" +
+    (data.description || "Aprašymo nėra.")
+  );
+
+}
