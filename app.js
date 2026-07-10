@@ -44,7 +44,11 @@ async function showGifts() {
 
     card.innerHTML = `
 
-      <img src="${gift.image_url}" alt="${gift.title}">
+      <img 
+  src="${gift.image_url}" 
+  alt="${gift.title}"
+  onclick="openGift(${gift.id})"
+>
 
       <div class="content">
 
