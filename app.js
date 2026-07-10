@@ -1,4 +1,3 @@
-console.log("DANUTA VEIKIA");
 const SUPABASE_URL = "https://rmlrnnktqfzoknsnwrma.supabase.co";
 const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJtbHJubmt0cWZ6b2tuc253cm1hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2OTg5MjgsImV4cCI6MjA5OTI3NDkyOH0.Mxj_gXT_orQvKWbZhlaI7mgLwGdZEpczcCDG3MfrJOo";
 
