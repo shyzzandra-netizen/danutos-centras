@@ -132,8 +132,9 @@ async function reserveGift(id) {
 }
 
 
-// ŠITOS EILUTĖS TRŪKO
+
 showGifts();
+
 async function openGift(id) {
 
   const { data, error } = await supabaseClient
@@ -149,10 +150,39 @@ async function openGift(id) {
   }
 
 
-  alert(
-    data.title +
-    "\n\n" +
-    (data.description || "Aprašymo nėra.")
-  );
+  document.getElementById("modal-image").src = data.image_url;
+
+  document.getElementById("modal-title").innerText = data.title;
+
+  document.getElementById("modal-description").innerText =
+    data.description || "Aprašymo nėra.";
+
+  document.getElementById("modal-price").innerText =
+    data.price || "";
+
+
+  const link = document.getElementById("modal-link");
+
+  if (data.link) {
+    link.href = data.link;
+    link.style.display = "block";
+  } else {
+    link.style.display = "none";
+  }
+
+
+  document.getElementById("modal-reserve").onclick = function () {
+    reserveGift(data.id);
+    closeGift();
+  };
+
+
+  document.getElementById("gift-modal").style.display = "block";
+
+}
+
+function closeGift() {
+
+  document.getElementById("gift-modal").style.display = "none";
 
 }
