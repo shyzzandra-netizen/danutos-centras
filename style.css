@@ -184,3 +184,8 @@ button:hover {
   font-size: 14px;
   font-weight: bold;
 }
+
+.more {
+  min-height: 25px;
+  margin-top: 10px;
+}
