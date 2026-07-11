@@ -209,6 +209,6 @@ button:hover {
   border-radius: 18px;
   margin: 25px auto;
   display: block;
-  border: 5px solid #354b3a;
-  box-shadow: 0 8px 20px rgba(53,75,58,.25);
+  border: 5px solid #fffaf4;
+  box-shadow: 0 8px 20px rgba(100,50,30,.18);
 }
