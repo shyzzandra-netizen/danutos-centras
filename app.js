@@ -194,6 +194,9 @@ async function openGift(id) {
     .eq("id", id)
     .single();
 
+console.log("SUPABASE ATSAKĖ");
+console.log(data);
+console.log(error);
 
   if (error) {
     console.log(error);
