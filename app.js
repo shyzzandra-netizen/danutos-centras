@@ -184,6 +184,8 @@ showGifts();
 
 async function openGift(id) {
 
+  console.log("OPEN GIFT", id);
+  
   const { data, error } = await supabaseClient
     .from("gifts")
     .select("*")
