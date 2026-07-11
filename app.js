@@ -77,9 +77,17 @@ card.onclick = () => openGift(gift.id);
   ${(gift.description && gift.description.length > 90) ? "…" : ""}
 </p>
 
-<p class="more">
-  Skaityti daugiau →
-</p>
+${
+  gift.description
+  ?
+  `
+  <p class="more">
+    Skaityti daugiau →
+  </p>
+  `
+  :
+  ""
+}
 
 ${
   gift.reserved
