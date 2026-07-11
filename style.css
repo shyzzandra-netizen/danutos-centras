@@ -5,6 +5,13 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+body::before {
+  content: "";
+  display: block;
+  height: 12px;
+  background: #354b3a;
+}
+
 header {
   text-align: center;
   padding: 70px 25px 40px;
