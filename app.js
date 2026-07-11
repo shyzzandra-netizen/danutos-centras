@@ -41,7 +41,10 @@ async function showGifts() {
     const card = document.createElement("div");
 
     card.className = "card";
-card.onclick = () => openGift(gift.id);
+card.onclick = () => {
+  console.log("KORTELĖ PASPAUSTA", gift.id);
+  openGift(gift.id);
+};
 
     card.innerHTML = `
 
