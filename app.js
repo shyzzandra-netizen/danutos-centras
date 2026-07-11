@@ -349,3 +349,14 @@ async function cancelReservation(id) {
 
 
 showGifts();
+
+const photo = document.getElementById("danuta-photo");
+const photoModal = document.getElementById("photo-modal");
+
+photo.onclick = function () {
+  photoModal.style.display = "flex";
+};
+
+photoModal.onclick = function () {
+  photoModal.style.display = "none";
+};
