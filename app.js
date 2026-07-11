@@ -242,7 +242,7 @@ else {
 }
 
 
-  document.getElementById("gift-modal").style.display = "block";
+ document.getElementById("gift-modal").style.display = "flex";
 
 }
 
