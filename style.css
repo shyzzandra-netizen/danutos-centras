@@ -164,3 +164,7 @@ button:hover {
   cursor: pointer;
   color: #8b4058;
 }
+
+.preview {
+  min-height: 45px;
+}
