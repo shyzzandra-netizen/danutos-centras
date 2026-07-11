@@ -223,10 +223,10 @@ if (!data.reserved) {
   modalButton.innerText = "Rezervuoti";
   modalButton.style.display = "block";
 
-  modalButton.onclick = function () {
-    reserveGift(data.id);
+  modalButton.onclick = async function () {
+    await reserveGift(data.id);
     closeGift();
-  };
+};
 
 }
 else if (data.reserved_by === visitorId) {
@@ -234,10 +234,10 @@ else if (data.reserved_by === visitorId) {
   modalButton.innerText = "Atšaukti rezervaciją";
   modalButton.style.display = "block";
 
-  modalButton.onclick = function () {
-    cancelReservation(data.id);
+  modalButton.onclick = async function () {
+    await cancelReservation(data.id);
     closeGift();
-  };
+};
 
 }
 else {
