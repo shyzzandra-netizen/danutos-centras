@@ -56,6 +56,14 @@ async function showGifts() {
 
         <p>${gift.price ?? ""}</p>
 
+        <p class="preview">
+  ${(gift.description || "").slice(0, 90)}
+  ${(gift.description && gift.description.length > 90) ? "…" : ""}
+</p>
+
+<p class="more">
+  Skaityti daugiau →
+</p>
 
         ${
           gift.reserved
