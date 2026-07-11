@@ -221,3 +221,20 @@ button:hover {
 #danuta-photo:hover {
   transform: scale(1.03);
 }
+
+.photo-modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-modal img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.3);
+}
