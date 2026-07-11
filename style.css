@@ -212,3 +212,12 @@ button:hover {
   border: 5px solid #fffaf4;
   box-shadow: 0 8px 20px rgba(100,50,30,.18);
 }
+
+#danuta-photo {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#danuta-photo:hover {
+  transform: scale(1.03);
+}
