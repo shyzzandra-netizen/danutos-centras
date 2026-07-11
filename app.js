@@ -299,7 +299,9 @@ async function openGift(id) {
 
 
 
-  document.getElementById("gift-modal").style.display = "flex";
+  const modal = document.getElementById("gift-modal");  
+  console.log("MODAL ELEMENTAS:", modal);  
+  modal.style.display = "flex";
 
 
 }
