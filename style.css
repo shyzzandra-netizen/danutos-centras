@@ -46,6 +46,7 @@ main {
 
 .card {
   background: #fffaf4;
+  border: 2px solid #354b3a;
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(100,50,30,.12);
