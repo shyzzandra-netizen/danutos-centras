@@ -196,10 +196,10 @@ button:hover {
 }
 
 .header-image {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 20px auto;
+  width: 280px;
+  height: auto;
+  border-radius: 25px;
+  margin: 25px auto;
   display: block;
+  box-shadow: 0 10px 25px rgba(100,50,30,.15);
 }
