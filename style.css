@@ -49,6 +49,14 @@ main {
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(100,50,30,.12);
+
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.12);
 }
 
 .card img {
@@ -77,6 +85,9 @@ button {
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
+
+  position: relative;
+z-index: 2;
 }
 
 button:hover {
