@@ -56,6 +56,22 @@ card.onclick = () => openGift(gift.id);
 
         <p>${gift.price ?? ""}</p>
 
+        <div class="status-space">
+  ${
+    gift.reserved
+    ?
+      (
+        myGift
+        ?
+        "Tavo pasirinkimas"
+        :
+        "Rezervuota"
+      )
+    :
+    ""
+  }
+</div>
+
         <p class="preview">
   ${(gift.description || "").slice(0, 90)}
   ${(gift.description && gift.description.length > 90) ? "…" : ""}
@@ -65,22 +81,19 @@ card.onclick = () => openGift(gift.id);
   Skaityti daugiau →
 </p>
 
-       ${
+${
   gift.reserved
   ?
     (
       myGift
       ?
       `
-      <p class="reserved">Tavo pasirinkimas</p>
       <button onclick="event.stopPropagation(); cancelReservation(${gift.id})">
         Atšaukti rezervaciją
       </button>
       `
       :
-      `
-      <p class="reserved">Rezervuota</p>
-      `
+      ``
     )
   :
   `
