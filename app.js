@@ -137,36 +137,25 @@ async function showGifts() {
 
 async function reserveGift(id) {
 
-
-  const { data: current } = await supabaseClient
-    .from("gifts")
-    .select("*")
-    .eq("reserved_by", visitorId);
-
+const { data: current } = await supabaseClient
+  .from("gifts")
+  .select("*")
+  .eq("reserved_by", visitorId);
 
 
-  if (current && current.length > 0) {
+if (current && current.length > 0) {
+
+  const addMore = confirm(
+    "Jau esi rezervavęs dovaną. Ar nori rezervuoti dar vieną?"
+  );
 
 
-    const change = confirm(
-      "Jūs jau pasirinkote dovaną. Ar norite pakeisti pasirinkimą?"
-    );
-
-
-    if (!change) {
-      return;
-    }
-
-
-    await supabaseClient
-      .from("gifts")
-      .update({
-        reserved: false,
-        reserved_by: null
-      })
-      .eq("id", current[0].id);
-
+  if (!addMore) {
+    return;
   }
+
+}
+
 
 
 
