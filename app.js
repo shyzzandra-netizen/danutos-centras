@@ -40,14 +40,13 @@ async function showGifts() {
     const card = document.createElement("div");
 
     card.className = "card";
-
+card.onclick = () => openGift(gift.id);
 
     card.innerHTML = `
 
-      <img 
-  src="${gift.image_url}" 
+    <img
+  src="${gift.image_url}"
   alt="${gift.title}"
-  onclick="openGift(${gift.id})"
 >
 
       <div class="content">
@@ -70,7 +69,7 @@ async function showGifts() {
           ?
           `<p class="reserved">Rezervuota</p>`
           :
-          `<button onclick="reserveGift(${gift.id})">
+          `<button onclick="event.stopPropagation(); reserveGift(${gift.id})">
              Rezervuoti
            </button>`
         }
