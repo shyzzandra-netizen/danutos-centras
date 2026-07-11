@@ -352,13 +352,22 @@ showGifts();
 
 console.log("NUOTRAUKOS KODAS VEIKIA");
 
-const photo = document.getElementById("danuta-photo");
-const photoModal = document.getElementById("photo-modal");
+document.addEventListener("DOMContentLoaded", function () {
 
-photo.onclick = function () {
-  photoModal.style.display = "flex";
-};
+  const photo = document.getElementById("danuta-photo");
+  const photoModal = document.getElementById("photo-modal");
 
-photoModal.onclick = function () {
-  photoModal.style.display = "none";
-};
+  if (!photo || !photoModal) {
+    console.log("Nuotraukos modalas nerastas");
+    return;
+  }
+
+  photo.onclick = function () {
+    photoModal.style.display = "flex";
+  };
+
+  photoModal.onclick = function () {
+    photoModal.style.display = "none";
+  };
+
+});
