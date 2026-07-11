@@ -53,10 +53,9 @@ main {
   cursor: pointer;
   transition: transform .2s ease, box-shadow .2s ease;
 
-display: flex;
-flex-direction: column;
-
-  }
+  display: flex;
+  flex-direction: column;
+}
 
 .card:hover {
   transform: translateY(-3px);
@@ -94,7 +93,7 @@ button {
   margin-top: auto;
 
   position: relative;
-z-index: 2;
+  z-index: 2;
 }
 
 button:hover {
@@ -106,10 +105,11 @@ button:hover {
   font-weight: 600;
 }
 
+
 .modal {
-  display: none !important;
+  display: none;
   position: fixed;
-  z-index: 9999;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
@@ -173,9 +173,11 @@ button:hover {
   color: #8b4058;
 }
 
+
 .preview {
   min-height: 45px;
 }
+
 
 .status-space {
   height: 30px;
@@ -183,6 +185,7 @@ button:hover {
   font-size: 14px;
   font-weight: bold;
 }
+
 
 .more {
   min-height: 25px;
