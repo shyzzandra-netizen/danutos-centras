@@ -305,7 +305,13 @@ function closeGift() {
 
 }
 
+document.getElementById("gift-modal").onclick = function(event) {
 
+  if (event.target === this) {
+    closeGift();
+  }
+
+};
 
 
 async function cancelReservation(id) {
