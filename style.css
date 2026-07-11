@@ -188,16 +188,3 @@ button:hover {
   min-height: 25px;
   margin-top: 10px;
 }
-
-.modal {
-  display: flex !important;
-  background: red !important;
-  z-index: 99999 !important;
-}
-
-.modal-content {
-  display: block !important;
-  background: white !important;
-  width: 400px !important;
-  height: 400px !important;
-}
