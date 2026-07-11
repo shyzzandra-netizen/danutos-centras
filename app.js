@@ -194,10 +194,39 @@ async function openGift(id) {
   }
 
 
-  document.getElementById("modal-reserve").onclick = function () {
+  const modalButton = document.getElementById("modal-reserve");
+
+
+if (!data.reserved) {
+
+  modalButton.innerText = "Rezervuoti";
+  modalButton.style.display = "block";
+
+  modalButton.onclick = function () {
     reserveGift(data.id);
     closeGift();
   };
+
+}
+else if (data.reserved_by === visitorId) {
+
+  modalButton.innerText = "Atšaukti rezervaciją";
+  modalButton.style.display = "block";
+
+  modalButton.onclick = function () {
+    cancelReservation(data.id);
+    closeGift();
+  };
+
+}
+else {
+
+  modalButton.innerText = "Rezervuota";
+  modalButton.style.display = "block";
+
+  modalButton.onclick = null;
+
+}
 
 
   document.getElementById("gift-modal").style.display = "block";
