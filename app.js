@@ -63,7 +63,7 @@ card.onclick = () => openGift(gift.id);
       (
         myGift
         ?
-        "Tavo pasirinkimas"
+        "Pasirinkai šią dovaną"
         :
         "Rezervuota"
       )
