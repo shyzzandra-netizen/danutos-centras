@@ -206,8 +206,9 @@ button:hover {
 .header-image {
   width: 280px;
   height: auto;
-  border-radius: 25px;
+  border-radius: 18px;
   margin: 25px auto;
   display: block;
-  box-shadow: 0 10px 25px rgba(100,50,30,.15);
+  border: 5px solid #fffaf4;
+  box-shadow: 0 8px 20px rgba(53,75,58,.25);
 }
