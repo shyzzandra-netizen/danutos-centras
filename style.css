@@ -107,7 +107,7 @@ button:hover {
 }
 
 .modal {
-  display: none;
+  display: none !important;
   position: fixed;
   z-index: 10;
   left: 0;
