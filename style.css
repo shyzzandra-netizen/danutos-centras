@@ -28,7 +28,7 @@ h1 {
 
 h2 {
   font-family: "Cormorant Garamond", serif;
-  color: #8d4f62;
+  color: #6f3548;
   font-size: 28px;
 }
 
@@ -209,6 +209,6 @@ button:hover {
   border-radius: 18px;
   margin: 25px auto;
   display: block;
-  border: 5px solid #fffaf4;
+  border: 5px solid #354b3a;
   box-shadow: 0 8px 20px rgba(53,75,58,.25);
 }
