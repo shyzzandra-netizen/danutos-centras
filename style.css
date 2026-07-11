@@ -52,7 +52,11 @@ main {
 
   cursor: pointer;
   transition: transform .2s ease, box-shadow .2s ease;
-}
+
+display: flex;
+flex-direction: column;
+
+  }
 
 .card:hover {
   transform: translateY(-3px);
