@@ -36,6 +36,7 @@ async function showGifts() {
 
 
   data.forEach((gift) => {
+    const myGift = gift.reserved_by === visitorId;
 
     const card = document.createElement("div");
 
@@ -64,15 +65,30 @@ card.onclick = () => openGift(gift.id);
   Skaityti daugiau →
 </p>
 
-        ${
-          gift.reserved
-          ?
-          `<p class="reserved">Rezervuota</p>`
-          :
-          `<button onclick="event.stopPropagation(); reserveGift(${gift.id})">
-             Rezervuoti
-           </button>`
-        }
+       ${
+  gift.reserved
+  ?
+    (
+      myGift
+      ?
+      `
+      <p class="reserved">Tavo pasirinkimas</p>
+      <button onclick="event.stopPropagation(); cancelReservation(${gift.id})">
+        Atšaukti rezervaciją
+      </button>
+      `
+      :
+      `
+      <p class="reserved">Rezervuota</p>
+      `
+    )
+  :
+  `
+  <button onclick="event.stopPropagation(); reserveGift(${gift.id})">
+    Rezervuoti
+  </button>
+  `
+}
 
       </div>
 
