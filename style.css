@@ -233,9 +233,9 @@ button:hover {
 }
 
 .photo-modal img {
-  width: 500px;
-  max-width: 85%;
-  max-height: 80vh;
+  width: 600px;
+  max-width: 90%;
+  max-height: 85vh;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0,0,0,.3);
 }
