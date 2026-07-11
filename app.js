@@ -196,6 +196,8 @@ async function openGift(id) {
   if (error) {
     console.log(error);
     return;
+
+    console.log("DUOMENYS", data);
   }
 
 
