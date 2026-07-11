@@ -171,3 +171,9 @@ button:hover {
 .preview {
   min-height: 45px;
 }
+
+.status-space {
+  height: 30px;
+  color: #8d4f62;
+  font-size: 14px;
+}
