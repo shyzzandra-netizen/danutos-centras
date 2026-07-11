@@ -184,25 +184,16 @@ showGifts();
 
 async function openGift(id) {
 
-  console.log("OPEN GIFT", id);
-
-  console.log("KREIPIUOSI Į SUPABASE");
-  
   const { data, error } = await supabaseClient
     .from("gifts")
     .select("*")
     .eq("id", id)
     .single();
 
-console.log("SUPABASE ATSAKĖ");
-console.log(data);
-console.log(error);
 
   if (error) {
     console.log(error);
     return;
-
-    console.log("DUOMENYS", data);
   }
 
 
@@ -230,39 +221,41 @@ console.log(error);
   const modalButton = document.getElementById("modal-reserve");
 
 
-if (!data.reserved) {
+  if (!data.reserved) {
 
-  modalButton.innerText = "Rezervuoti";
-  modalButton.style.display = "block";
+    modalButton.innerText = "Rezervuoti";
+    modalButton.style.display = "block";
 
-  modalButton.onclick = async function () {
-    await reserveGift(data.id);
-    closeGift();
-};
+    modalButton.onclick = async function () {
+      await reserveGift(data.id);
+      closeGift();
+    };
 
-}
-else if (data.reserved_by === visitorId) {
+  }
 
-  modalButton.innerText = "Atšaukti rezervaciją";
-  modalButton.style.display = "block";
+  else if (data.reserved_by === visitorId) {
 
-  modalButton.onclick = async function () {
-    await cancelReservation(data.id);
-    closeGift();
-};
+    modalButton.innerText = "Atšaukti rezervaciją";
+    modalButton.style.display = "block";
 
-}
-else {
+    modalButton.onclick = async function () {
+      await cancelReservation(data.id);
+      closeGift();
+    };
 
-  modalButton.innerText = "Rezervuota";
-  modalButton.style.display = "block";
+  }
 
-  modalButton.onclick = null;
+  else {
 
-}
+    modalButton.innerText = "Rezervuota";
+    modalButton.style.display = "block";
+
+    modalButton.onclick = null;
+
+  }
 
 
- document.getElementById("gift-modal").style.display = "flex";
+  document.getElementById("gift-modal").style.display = "flex";
 
 }
 
