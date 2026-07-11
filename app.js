@@ -185,6 +185,8 @@ showGifts();
 async function openGift(id) {
 
   console.log("OPEN GIFT", id);
+
+  console.log("KREIPIUOSI Į SUPABASE");
   
   const { data, error } = await supabaseClient
     .from("gifts")
