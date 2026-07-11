@@ -209,3 +209,25 @@ function closeGift() {
   document.getElementById("gift-modal").style.display = "none";
 
 }
+
+async function cancelReservation(id) {
+
+  const { error } = await supabaseClient
+    .from("gifts")
+    .update({
+      reserved: false,
+      reserved_by: null
+    })
+    .eq("id", id)
+    .eq("reserved_by", visitorId);
+
+
+  if (error) {
+    console.log("Atšaukimo klaida:", error);
+    return;
+  }
+
+
+  showGifts();
+
+}
