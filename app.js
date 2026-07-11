@@ -350,6 +350,8 @@ async function cancelReservation(id) {
 
 showGifts();
 
+console.log("NUOTRAUKOS KODAS VEIKIA");
+
 const photo = document.getElementById("danuta-photo");
 const photoModal = document.getElementById("photo-modal");
 
