@@ -165,6 +165,9 @@ button:hover {
   color: #8b4058;
 }
 
+.modal-content p {
+  text-align: justify;
+}
 
 .modal-content a {
   display: block;
@@ -194,6 +197,7 @@ button:hover {
 .preview {
   min-height: 35px;
   font-size: 15px;
+  text-align: justify;
 }
 
 
